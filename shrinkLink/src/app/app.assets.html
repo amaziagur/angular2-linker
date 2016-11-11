@@ -1,0 +1,7 @@
+<h2>myList</h2>
+<ul>
+    <li *ngFor="let urlAsset of urls">
+     <p> <img src={{urlAsset.icon}}> {{urlAsset.shortUrl}}</p>
+     <button type='button' ng-click="readMore()">read more</button>
+    </li>
+</ul>
