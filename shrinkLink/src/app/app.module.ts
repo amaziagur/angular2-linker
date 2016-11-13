@@ -19,6 +19,6 @@ import {UrlComponent} from './app.assets.component';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent, UrlComponent]
+  bootstrap: ([AppComponent, UrlComponent])
 })
 export class AppModule { }

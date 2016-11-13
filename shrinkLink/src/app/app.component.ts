@@ -23,7 +23,8 @@ export class AppComponent{
     return appName;
   }
   
-  doSubmit(event) {
+  clicked(event) {
+    console.error("asdasdasdasd"); // log to console instead
     event.preventDefault();
   }
 

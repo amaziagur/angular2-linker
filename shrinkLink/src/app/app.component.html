@@ -3,6 +3,9 @@
 </h1>-->
 
 <form [formGroup]="loginForm">
-    <input formControlName="dob" placeholder="Date of Birth">
-  <button type="submit">Submit</button>
+  <label>cut your link! </label>
+    <input formControlName="dob" placeholder="cut it here!">
+  <!--<button type="submit">Submit</button>-->
+  <button (click)="clicked($event)">do it</button>
+  
 </form>
