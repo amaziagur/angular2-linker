@@ -27,10 +27,10 @@ export class AppComponent{
   }
   
 
-  clicked(url:string) {
-    this.assetService.pushNewAsset(url)
+  clicked(url: HTMLInputElement) {
+    this.assetService.pushNewAsset(url.value)
     console.log(url);
-    
+    url.value = null
   }
 
 
