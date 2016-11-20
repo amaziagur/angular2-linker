@@ -6,11 +6,10 @@ import { url } from './url';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  templateUrl: './url.input.component.html',
   providers : [AssetsService]
 })
-export class AppComponent{ 
+export class UrlInputComponent{ 
     public cutLinkForm: FormGroup; 
 
   constructor(fb: FormBuilder, private assetService : AssetsService) {

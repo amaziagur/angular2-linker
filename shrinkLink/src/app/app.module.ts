@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
-import {UrlComponent} from './app.assets.component';
+import { UrlInputComponent } from './url.input.component';
+import {AssetsComponent} from './app.assets.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    UrlComponent
+    UrlInputComponent, 
+    AssetsComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +19,6 @@ import {UrlComponent} from './app.assets.component';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: ([AppComponent, UrlComponent])
+  bootstrap: ([UrlInputComponent, AssetsComponent])
 })
 export class AppModule { }

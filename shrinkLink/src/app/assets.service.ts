@@ -11,8 +11,6 @@ export class AssetsService{
  constructor (private http: Http) {}
   
     getAssets() : Observable<UrlAsset[]>{
-        //https://shortener-link.herokuapp.com/shortener/v1/assets/all.json
-        //http://localhost:8080/shortener/v1/assets/all.json
         return this.http.get('https://shortener-link.herokuapp.com/shortener/v1/assets/all.json')
             .map(this.extractData)
             .catch(this.handleError);

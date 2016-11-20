@@ -7,13 +7,12 @@ import {AssetsService} from './assets.service'
     templateUrl: './app.assets.html',
     providers : [AssetsService]
 })
-export class UrlComponent implements OnInit {
+export class AssetsComponent implements OnInit {
   urls : UrlAsset[];
 
   constructor (private assetService : AssetsService){
       this.assetService = assetService
   }
-
 
   ngOnInit() : void {
       console.debug("yay!")
