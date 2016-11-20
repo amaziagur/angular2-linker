@@ -11,22 +11,15 @@ import { url } from './url';
   providers : [AssetsService]
 })
 export class AppComponent{ 
-    public loginForm: FormGroup; 
+    public cutLinkForm: FormGroup; 
 
   constructor(fb: FormBuilder, private assetService : AssetsService) {
     this.assetService = assetService;
-    this.loginForm = fb.group({
+    this.cutLinkForm = fb.group({
       dob: ["", Validators.required]
     });
   }
   
-  form: FormGroup;
-  public getLink(){
-    let appName = "Test";
-    return appName;
-  }
-  
-
   clicked(url: HTMLInputElement) {
     this.assetService.pushNewAsset(url.value)
     console.log(url);
