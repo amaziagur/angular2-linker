@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { UrlInputComponent } from './url.input.component';
 import {AssetsComponent} from './app.assets.component';
+import {RootComponent} from "./app.root.component";
 
 
 @NgModule({
   declarations: [
-    UrlInputComponent, 
+    RootComponent,
+    UrlInputComponent,
     AssetsComponent
   ],
   imports: [
@@ -19,6 +21,6 @@ import {AssetsComponent} from './app.assets.component';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: ([UrlInputComponent, AssetsComponent])
+  bootstrap: ([RootComponent])
 })
 export class AppModule { }
