@@ -3,7 +3,7 @@ import {UrlAsset} from './UrlAsset'
 import {AssetsService} from './assets.service'
 
 @Component({
-    selector: 'asset-root',
+    selector: 'assets',
     templateUrl: './app.assets.html',
     providers : [AssetsService]
 })

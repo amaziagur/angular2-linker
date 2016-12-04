@@ -5,12 +5,12 @@ import {AssetsService} from './assets.service'
 import { url } from './url';
 
 @Component({
-  selector: 'app-root',
+  selector: 'url-input',
   templateUrl: './url.input.component.html',
   providers : [AssetsService]
 })
-export class UrlInputComponent{ 
-    public cutLinkForm: FormGroup; 
+export class UrlInputComponent{
+    public cutLinkForm: FormGroup;
 
   constructor(fb: FormBuilder, private assetService : AssetsService) {
     this.assetService = assetService;
@@ -18,7 +18,7 @@ export class UrlInputComponent{
       dob: ["", Validators.required]
     });
   }
-  
+
   clicked(url: HTMLInputElement) {
     this.assetService.pushNewAsset(url.value)
     console.log(url);
