@@ -9,9 +9,13 @@ import {AssetsService} from './assets.service'
 })
 export class AssetsComponent implements OnInit {
   urls : UrlAsset[];
-
+  // subscription: any;
   constructor (private assetService : AssetsService){
       this.assetService = assetService
+    // this.subscription = this.assetService.pushNewAsset(any)
+    //   .subscribe(this.assetService.getAssets().subscribe(
+    //     data => this.urls = data
+    //   ));
   }
 
   ngOnInit() : void {
@@ -20,5 +24,15 @@ export class AssetsComponent implements OnInit {
             data => this.urls = data
         )
   }
+
+  function1(){
+    console.log("new asset!!!!!");
+    console.log(this.urls)
+    console.log(this.assetService.getAssets().subscribe(data => this.urls = data))
+  }
+
+  // ngOnDestroy() {
+  //   this.subscription.unsubscribe();
+  // }
 
 }

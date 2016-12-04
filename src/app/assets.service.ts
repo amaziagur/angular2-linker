@@ -7,9 +7,9 @@ import { Headers, RequestOptions } from '@angular/http';
 
 @Injectable()
 export class AssetsService{
- 
+
  constructor (private http: Http) {}
-  
+
     getAssets() : Observable<UrlAsset[]>{
         return this.http.get('https://shortener-link.herokuapp.com/shortener/v1/assets/all.json')
             .map(this.extractData)
@@ -19,7 +19,7 @@ export class AssetsService{
     pushNewAsset(url : string) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-        return this.http.post("https://shortener-link.herokuapp.com/shortener/v1/short", JSON.stringify({"url": `${url}`}), options)
+      this.http.post("https://shortener-link.herokuapp.com/shortener/v1/short", JSON.stringify({"url": `${url}`}), options)
              .toPromise()
              .then(this.extractData)
              .catch(this.handleError);
