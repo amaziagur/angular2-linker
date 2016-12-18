@@ -1,6 +1,9 @@
 
 <form [formGroup]="cutLinkForm">
-  <label>cut your link! </label>
-    <input type="text"  #url placeholder="cut it here!">
-    <button type="submit" (click) = 'clicked(url)'>do it</button>
+  <!--<label>cut your link! </label>-->
+    <input type="text"  #url placeholder="cut it here"><br>
+    <input type="text"  #url placeholder="add some personality?"><br>
+    <input type="text"  #url placeholder="we think it should be..."><br>
+    <button type="submit" (click) = 'clicked(url)'>clear it!</button>
+    <button type="submit" (click) = 'clicked(url)'>cut it!</button>
 </form>
