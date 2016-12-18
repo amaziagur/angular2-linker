@@ -26,6 +26,7 @@ export class UrlInputComponent{
   clicked(url: HTMLInputElement) {
     this.eventService.setLogged({ event: url.value })
     this.assetService.pushNewAsset(url.value)
+    console.log(url.value)
     url.value = null
   }
 }
