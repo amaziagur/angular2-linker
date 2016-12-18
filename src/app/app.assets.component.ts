@@ -1,28 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import {UrlAsset} from './UrlAsset'
 import {AssetsService} from './assets.service'
+import {EventService} from "./eventService";
+import {LoggedEvent} from "./LoggedEvent";
 
 @Component({
     selector: 'assets',
     templateUrl: './app.assets.html',
-    providers : [AssetsService]
+    providers : [AssetsService, EventService]
 })
 export class AssetsComponent implements OnInit {
   urls : UrlAsset[];
-  // subscription: any;
-  constructor (private assetService : AssetsService){
-      this.assetService = assetService
-    // this.subscription = this.assetService.pushNewAsset(any)
-    //   .subscribe(this.assetService.getAssets().subscribe(
-    //     data => this.urls = data
-    //   ));
+  subscription: any;
+  private logged: LoggedEvent;
+
+  constructor (private assetService : AssetsService, private eventService : EventService){
+
   }
 
   ngOnInit() : void {
+    this.subscription = this.eventService.getLogged().subscribe(logged => {
+      console.info('Receiving logged user Component B');
+      this.logged = logged;
+    });
       console.debug("yay!")
       this.assetService.getAssets().subscribe(
             data => this.urls = data
         )
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   function1(){
@@ -31,8 +39,5 @@ export class AssetsComponent implements OnInit {
     console.log(this.assetService.getAssets().subscribe(data => this.urls = data))
   }
 
-  // ngOnDestroy() {
-  //   this.subscription.unsubscribe();
-  // }
 
 }

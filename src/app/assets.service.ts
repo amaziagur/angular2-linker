@@ -1,12 +1,12 @@
-import {Injectable} from '@angular/core';
-import {Http, Response} from '@angular/http';
-import {Observable} from 'rxjs/Rx';
-import {UrlAsset} from './UrlAsset';
-import { Headers, RequestOptions } from '@angular/http';
+import {Injectable} from "@angular/core";
+import {Http, Response, Headers, RequestOptions} from "@angular/http";
+import {Observable} from "rxjs/Rx";
+import {UrlAsset} from "./UrlAsset";
 
 
 @Injectable()
 export class AssetsService{
+
 
  constructor (private http: Http) {}
 
@@ -17,12 +17,13 @@ export class AssetsService{
     }
 
     pushNewAsset(url : string) {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
+
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      let options = new RequestOptions({ headers: headers });
       this.http.post("https://shortener-link.herokuapp.com/shortener/v1/short", JSON.stringify({"url": `${url}`}), options)
-             .toPromise()
-             .then(this.extractData)
-             .catch(this.handleError);
+              .toPromise()
+               .then(this.extractData)
+               .catch(this.handleError);
     }
 
     private extractData(res: Response) {
@@ -32,7 +33,6 @@ export class AssetsService{
        let body = res.json();
        return body || { };
     }
-
 
     private handleError (error: any) {
         let errMsg = error.message || 'Server error';
