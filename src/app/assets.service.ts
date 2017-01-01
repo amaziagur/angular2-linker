@@ -31,6 +31,8 @@ export class AssetsService{
              throw new Error('Bad response status: ' + res.status);
            }
        let body = res.json();
+      console.log("service!!")
+      console.log(body)
        return body || { };
     }
 
