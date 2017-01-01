@@ -1,13 +1,20 @@
 .form-style-6{
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  font: 95% Arial, Helvetica, sans-serif;
-  max-width: 400px;
+  font: 95% Aria  l, Helvetica, sans-serif;
+  /*max-width: 400px;*/
   margin: 10px auto;
   padding: 16px;
   background: #F7F7F7;
 }
+
+td {
+  padding: 16px;
+}
+table {
+  border-collapse: collapse;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 .form-style-6 h1{
   background: #43D1AF;
   padding: 20px 0;
@@ -17,14 +24,9 @@
   color: #fff;
   margin: -16px -16px 16px -16px;
 }
-.form-style-6 input[type="text"],
-.form-style-6 input[type="date"],
-.form-style-6 input[type="datetime"],
-.form-style-6 input[type="email"],
-.form-style-6 input[type="number"],
-.form-style-6 input[type="search"],
-.form-style-6 input[type="time"],
-.form-style-6 input[type="url"],
+.form-style-6 input[type="text"]{
+  width: 300px;
+}
 .form-style-6 textarea,
 .form-style-6 select
 {
@@ -45,13 +47,6 @@
   font: 95% Arial, Helvetica, sans-serif;
 }
 .form-style-6 input[type="text"]:focus,
-.form-style-6 input[type="date"]:focus,
-.form-style-6 input[type="datetime"]:focus,
-.form-style-6 input[type="email"]:focus,
-.form-style-6 input[type="number"]:focus,
-.form-style-6 input[type="search"]:focus,
-.form-style-6 input[type="time"]:focus,
-.form-style-6 input[type="url"]:focus,
 .form-style-6 textarea:focus,
 .form-style-6 select:focus
 {

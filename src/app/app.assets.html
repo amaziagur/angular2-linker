@@ -1,6 +1,12 @@
-<h2>myList</h2>
+<div>
 <ul>
-    <li *ngFor="let urlAsset of urls">
-     <p> <img src={{urlAsset.icon}}> {{urlAsset.shortUrl}}</p>
+
+  <li *ngFor="let urlAsset of urls">
+    <img src={{urlAsset.icon}}>
+    <h3>{{urlAsset.siteName}}</h3>
+     <p>here's your short: {{urlAsset.shortUrl}}</p>
+      <p>num of visit: {{urlAsset.hits}}</p>
     </li>
 </ul>
+
+</div>

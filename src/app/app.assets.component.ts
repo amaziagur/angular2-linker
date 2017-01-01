@@ -7,6 +7,7 @@ import {LoggedEvent} from "./LoggedEvent";
 @Component({
     selector: 'assets',
     templateUrl: './app.assets.html',
+    styleUrls: ['./app.assets.component.css'],
     providers : [AssetsService, EventService]
 })
 export class AssetsComponent implements OnInit {

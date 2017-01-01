@@ -1,10 +1,28 @@
+<!--<div class="form-style-6">-->
+<!--<form [formGroup]="cutLinkForm">-->
+    <!--<input type="text"  #url placeholder="cut it here">-->
+    <!--<input type="text"   placeholder="add some personality?">-->
+    <!--<input type="text"   placeholder="we think it should be...">-->
+    <!--<button type="submit" (click) = 'clicked(url)'>clear it!</button>-->
+<!--</form>-->
+<!--</div>-->
+
+
 <div class="form-style-6">
-<form [formGroup]="cutLinkForm">
-  <!--<label>cut your link! </label>-->
-    <input type="text"  #url placeholder="cut it here"><br>
-    <input type="text"   placeholder="add some personality?"><br>
-    <input type="text"   placeholder="we think it should be..."><br>
-    <button type="submit" (click) = 'clicked(url)'>clear it!</button>
-    <button type="submit" (click) = 'clicked(url)'>cut it!</button>
-</form>
-</div>
+<table>
+  <tr>
+    <td>
+      <input type="text"  #url placeholder="cut it here">
+    </td>
+    <td>
+      <input type="text"   placeholder="add some personality?">
+    </td>
+    <td>
+      <input type="text"   placeholder="we think it should be...">
+    </td>
+    <td>
+      <button type="submit" (click) = 'clicked(url)'>clear!</button>
+    </td>
+  </tr>
+</table>
+  </div>

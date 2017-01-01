@@ -7,12 +7,6 @@ import {EventService} from "./eventService";
   selector: 'inputer',
   templateUrl: './url.input.component.html',
   styleUrls: ['/url.input.component.css'],
-  // styles: [`
-  //   form {
-  //       float:right;
-  //       clear:both;
-  //   }
-  // `],
   providers : [AssetsService, EventService]
 })
 export class UrlInputComponent{
