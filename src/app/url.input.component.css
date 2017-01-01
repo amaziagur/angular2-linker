@@ -51,7 +51,6 @@ table {
 .form-style-6 select:focus
 {
   box-shadow: 0 0 5px #43D1AF;
-  padding: 3%;
   border: 1px solid #43D1AF;
 }
 
